@@ -1,0 +1,47 @@
+@import "../../../../../variables";
+
+.project-list-item-container{
+  width: 100%;
+  padding: 7px;
+  background-color: #fff;
+  border-radius: 2px;
+  margin-bottom: 5px;
+  .project-status-container{
+    display: block;
+    text-align: right;
+    margin-bottom: 7px;
+    .project-status{
+      display: inline-block;
+      padding: 3px;
+      color: #fff;
+      font-size: 13px;
+      border-radius: 2px;
+    }
+    .published{
+      background-color: @blue;
+    }
+    .draft{
+      background-color: @yellow;
+    }
+    .unpublished{
+      background-color: @darkRed;
+    }
+  }
+  .project-item-title{
+    color: @darkGrey;
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 5px;
+  }
+
+  .project-item-excerpt{
+    color: @grey;
+    font-size: 16px;
+  }
+}
+
+.active-project{
+  border: 4px solid rgba(21,49,255,0.25);
+}

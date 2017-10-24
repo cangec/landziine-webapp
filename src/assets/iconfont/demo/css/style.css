@@ -1,0 +1,347 @@
+/*--------------------------------
+
+Landezine Web Font - built using nucleoapp.com
+License - nucleoapp.com/license/
+
+-------------------------------- */
+@font-face {
+  font-family: 'Landezine';
+  src: url('../../fonts/Landezine.eot');
+  src: url('../../fonts/Landezine.eot') format('embedded-opentype'), url('../../fonts/Landezine.woff2') format('woff2'), url('../../fonts/Landezine.woff') format('woff'), url('../../fonts/Landezine.ttf') format('truetype'), url('../../fonts/Landezine.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* --------------------------------
+
+Primary style
+
+-------------------------------- */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: sans-serif;
+  color: #333333;
+  background: white;
+}
+
+a {
+  color: #608CEE;
+  text-decoration: none;
+}
+
+/* --------------------------------
+
+Main components
+
+-------------------------------- */
+header {
+  text-align: center;
+  padding: 100px 0 0;
+}
+header h1 {
+  font-size: 2.8rem;
+}
+header p {
+  font-size: 1.4rem;
+  margin-top: 1em;
+}
+header a:hover {
+  text-decoration: underline;
+}
+
+section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+section h2 {
+  border-bottom: 1px solid #e2e2e2;
+  padding: 0 0 1em .2em;
+  margin-bottom: 1em;
+}
+
+ul::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+ul li {
+  width: 25%;
+  float: left;
+  padding: 16px 0;
+  text-align: center;
+  border-radius: .25em;
+  -webkit-transition: background 0.2s;
+  -moz-transition: background 0.2s;
+  transition: background 0.2s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+}
+ul li:hover {
+  background: #f4f4f4;
+}
+ul p, ul em, ul input {
+  display: inline-block;
+  font-size: 1rem;
+  color: #999999;
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+ul p {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+ul p::selection, ul em::selection {
+  background: #608CEE;
+  color: #efefef;
+}
+
+ul em {
+  margin-bottom: 8px;
+}
+
+ul em::before {
+  content: '[';
+}
+ul em::after {
+  content: ']';
+}
+
+ul input {
+  text-align: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+@media only screen and (min-width: 768px) {
+  ul li {
+    width: 20%;
+    float: left;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  ul li {
+    width: 12.5%;
+    float: left;
+    padding: 32px 0;
+  }
+}
+
+/* --------------------------------
+
+icons
+
+-------------------------------- */
+.nc-icon {
+  display: inline-block;
+  font: normal normal normal 32px/1 'Landezine';
+  speak: none;
+  text-transform: none;
+  /* Better Font Rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*------------------------
+  spinning icons
+-------------------------*/
+.nc-icon.spin {
+  -webkit-animation: nc-icon-spin 2s infinite linear;
+  -moz-animation: nc-icon-spin 2s infinite linear;
+  animation: nc-icon-spin 2s infinite linear;
+}
+@-webkit-keyframes nc-icon-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes nc-icon-spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@keyframes nc-icon-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/*------------------------
+  font icons
+-------------------------*/
+
+.nc-zoom-2-2::before {
+    content: "\ea03";
+}
+
+.nc-small-triangle-down::before {
+    content: "\ea04";
+}
+
+.nc-tail-right::before {
+    content: "\ea05";
+}
+
+.nc-tail-left::before {
+    content: "\ea06";
+}
+
+.nc-tail-down::before {
+    content: "\ea07";
+}
+
+.nc-logo-facebook::before {
+    content: "\ea08";
+}
+
+.nc-logo-linkedin::before {
+    content: "\ea09";
+}
+
+.nc-logo-twitter::before {
+    content: "\ea0a";
+}
+
+.nc-stre-left::before {
+    content: "\ea0b";
+}
+
+.nc-stre-right::before {
+    content: "\ea0c";
+}
+
+.nc-simple-remove::before {
+    content: "\ea0d";
+}
+
+.nc-check-circle-08::before {
+    content: "\ea0e";
+}
+
+.nc-pin-3::before {
+    content: "\ea0f";
+}
+
+.nc-Line2::before {
+    content: "\ea10";
+}
+
+.nc-Line::before {
+    content: "\ea11";
+}
+
+.nc-small-down::before {
+    content: "\ea12";
+}
+
+.nc-favourite-31::before {
+    content: "\ea13";
+}
+
+.nc-small-add::before {
+    content: "\ea14";
+}
+
+.nc-favourite-remove-33::before {
+    content: "\ea15";
+}
+
+.nc-favourite-add-32::before {
+    content: "\ea16";
+}
+
+.nc-at-sign::before {
+    content: "\ea17";
+}
+
+.nc-dots::before {
+    content: "\ea18";
+}
+
+.nc-small-up::before {
+    content: "\ea19";
+}
+
+.nc-send::before {
+    content: "\ea1a";
+}
+
+.nc-newsletter::before {
+    content: "\ea1b";
+}
+
+.nc-email-84::before {
+    content: "\ea1c";
+}
+
+.nc-print-round::before {
+    content: "\ea1d";
+}
+
+.nc-edit-75::before {
+    content: "\ea1e";
+}
+
+.nc-image::before {
+    content: "\ea1f";
+}
+
+.nc-folder-image::before {
+    content: "\ea20";
+}
+
+.nc-player-48::before {
+    content: "\ea21";
+}
+
+.nc-action-74::before {
+    content: "\ea22";
+}
+
+.nc-single-content-02::before {
+    content: "\ea23";
+}
+
+.nc-edit::before {
+    content: "\ea24";
+}
+

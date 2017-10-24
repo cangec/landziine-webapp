@@ -1,0 +1,49 @@
+<div class="search-box-container">
+  <div class="search-box-input">
+    <input class="search" placeholder="SEARCH ARCHITECT...">
+  </div>
+  <div class="search-box-item practice-container" dropdown>
+    <div type="button" dropdownToggle >
+      ANY PRACTICE &nbsp;<i class="nc-icon nc-small-triangle-down"></i>
+    </div>
+    <ul *dropdownMenu class="dropdown-menu" role="menu">
+      <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+      <li class="divider dropdown-divider"></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+      </li>
+    </ul>
+  </div>
+  <div class="search-box-item country-container" dropdown>
+    <div dropdownToggle >
+      ANY COUNTRY &nbsp; <i class="nc-icon nc-small-triangle-down"></i>
+    </div>
+    <ul *dropdownMenu class="dropdown-menu" role="menu">
+      <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+      <li class="divider dropdown-divider"></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+      </li>
+    </ul>
+  </div>
+  <div class="search-box-item city-container" dropdown>
+    <div dropdownToggle >
+      ANY CITY &nbsp; <i class="nc-icon nc-small-triangle-down"></i>
+    </div>
+    <ul *dropdownMenu class="dropdown-menu" role="menu">
+      <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+      <li class="divider dropdown-divider"></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+      </li>
+    </ul>
+  </div>
+  <div [routerLink]="'/search-results'" class="search-box-item submit">
+    SUBMIT —
+  </div>
+  <img src="../../../../assets/images/On-Sedi.svg" class="sitting-man">
+</div>
+

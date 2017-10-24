@@ -1,0 +1,51 @@
+<div class="join-container">
+  <div  routerLink="/" class="logo-container">
+    <div class="logo-back-icon">
+      <i class="fa fa-chevron-left" aria-hidden="true"> </i>
+    </div>
+    <div class="logo"></div>
+  </div>
+
+  <div class="join-well">
+    <h1 class="well-title">
+      Welcome Lorem Ipsum
+    </h1>
+    <p class="well-text">Check or change your basic informations.</p>
+
+    <div class="lz-form">
+      <div class="lz-form-group">
+        <label class="lz-label" for="name">Name</label>
+        <input value="Lorem Ipsum" class="lz-input" id="name" type="text">
+      </div>
+      <div class="lz-form-group">
+        <label class="lz-label" for="email">Email</label>
+        <input value="mike@base.com" class="lz-input" id="email" type="email">
+      </div>
+      <div class="lz-form-group">
+        <label class="lz-label" for="name">Latest education</label>
+        <input value="LMA of Landscape Architecture" class="lz-input" id="education" type="text">
+      </div>
+      <div class="lz-form-group">
+        <label class="lz-label">Featured Skills</label>
+        <tag-input
+          secondaryPlaceholder="Add skills"
+          placeholder="Add a skill"
+          [theme]="'bootstrap'"
+          inputClass="tag-input"
+          [ngModel]="items">
+        </tag-input>
+      </div>
+      <div class="lz-form-group">
+        <label class="lz-label" for="website">Website</label>
+        <input value="www.portfolio.com" class="lz-input" id="website" type="text">
+      </div>
+      <div class="lz-form-group">
+        <label class="lz-label" for="country">Country & city</label>
+        <input value="Slovenia, Ljubljana" class="lz-input" id="country" type="text">
+      </div>
+    </div>
+    <div class="welcome-btn-container">
+      <button (click)="continue()" class="lz-btn default-btn">Continue</button>
+    </div>
+  </div>
+</div>

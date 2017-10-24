@@ -1,0 +1,18 @@
+<div class="lz-custom-container studios-container">
+  <div class="lz-swiper-container">
+    <swiper [config]="swiperConfig" #usefulSwiper>
+      <div class="swiper-wrapper">
+        <app-swiper-card [listing]="item" class="swiper-slide" *ngFor="let item of studioListings"></app-swiper-card>
+      </div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next">
+        <i class="nc-icon nc-tail-right square white-bg"></i>
+      </div>
+      <div class="swiper-button-prev">
+        <i class="nc-icon nc-tail-left square white-bg" aria-hidden="true"></i>
+      </div>
+    </swiper>
+  </div>
+
+</div>
+

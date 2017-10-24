@@ -1,0 +1,45 @@
+@import "../../../../../variables";
+
+.applicant-container{
+
+  background-color: @lightBorderGrey;
+  border-radius: 2px;
+  margin-bottom: 3px;
+  padding: 17px 70px 17px 19px;
+  position: relative;
+  line-height: 0;
+
+
+  .applicant-name{
+    font-family: 'Roboto', sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+  }
+  .applicant-icons{
+
+    position: absolute;
+    right: 17px;
+    top: 18px;
+
+    .applicant-icon{
+      display: inline-block;
+      margin-left: 10px;
+      color: @borderGrey;
+      font-size: 17px;
+      height: 18px;
+      -webkit-transition: color .2s ease-out;
+      -moz-transition: color .2s ease-out;
+      -o-transition: color .2s ease-out;
+      transition: color .2s ease-out;
+      cursor: pointer;
+    }
+
+    .applicant-icon:hover{
+      color: @text;
+    }
+  }
+
+
+}

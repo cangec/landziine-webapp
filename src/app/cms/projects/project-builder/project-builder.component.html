@@ -1,0 +1,23 @@
+<app-project-basic-info></app-project-basic-info>
+<app-image-upload [title]="'Cover image'"></app-image-upload>
+<div [attr.data-id]="'project-blocks'" class="blocks-container" [dragula]='"builder-bag"' [dragulaOptions]="dragulaOptions">
+  <p *ngIf="!blocks.length" class="drag-here-text">
+    Drag and drop blocks here
+  </p>
+
+  <div *ngFor="let block of blocks">
+    <div *ngIf="block.type === 'image'">
+      <app-image-upload [title]="'Image'"></app-image-upload>
+    </div>
+    <div *ngIf="block.type === 'text'">
+     text
+    </div>
+    <div *ngIf="block.type === 'video'">
+      <app-video-block [title]="'Video'"></app-video-block>
+    </div>
+    <div *ngIf="block.type === 'gallery'">
+      gallery
+    </div>
+  </div>
+</div>
+

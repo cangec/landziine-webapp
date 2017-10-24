@@ -1,0 +1,19 @@
+<div class="project-block-container">
+  <div class="yellow-circle"></div>
+  <div *ngIf="type === 'image'" class="icon-title-container">
+    <i class="fa fa-image"></i>
+    <p class="block-title">Add picture</p>
+  </div>
+  <div *ngIf="type === 'video'" class="icon-title-container">
+    <i class="fa fa-video-camera"></i>
+    <p class="block-title">Add video</p>
+  </div>
+  <div *ngIf="type === 'text'" class="icon-title-container">
+    <i class="fa fa-file-text"></i>
+    <p class="block-title">Add text</p>
+  </div>
+  <div *ngIf="type === 'gallery'" class="icon-title-container">
+    <i class="fa fa-file-image-o"></i>
+    <p class="block-title">Add gallery</p>
+  </div>
+</div>

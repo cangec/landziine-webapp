@@ -1,0 +1,80 @@
+@import "../../../../../variables";
+
+.employee{
+  width: 79px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  float: left;
+  cursor: pointer;
+  position: relative;
+  .avatar{
+    width: 79px;
+    height: 79px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../../../../../assets/images/samples/5.jpg");
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    .hover-container{
+      width: 79px;
+      height: 79px;
+      background-color: rgba(255,255,255,0.5);
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: none;
+
+      .star-container{
+        height: 40px;
+        width: 100%;
+        text-align: center;
+        line-height: 40px;
+        color: #fff;
+        -webkit-transition: all .2s ease-out;
+        -moz-transition: all .2s ease-out;
+        -o-transition: all .2s ease-out;
+        transition: all .2s ease-out;
+        font-size: 20px;
+      }
+      .delete-container{
+        height: 40px;
+        width: 100%;
+        text-align: center;
+        line-height: 40px;
+        color: #fff;
+        -webkit-transition: all .2s ease-out;
+        -moz-transition: all .2s ease-out;
+        -o-transition: all .2s ease-out;
+        transition: all .2s ease-out;
+        font-size: 20px;
+      }
+
+      .star-container:hover{
+        background-color: @blue;
+      }
+
+      .delete-container:hover{
+        background-color: @blue;
+      }
+    }
+  }
+
+  .name{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: @text;
+  }
+
+  .avatar:hover{
+    .hover-container{
+      display: block;
+    }
+  }
+
+}
+
+

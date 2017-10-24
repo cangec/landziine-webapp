@@ -1,0 +1,11 @@
+<div [ngClass]="{'active-project':selected}" class="project-list-item-container">
+  <div class="project-status-container">
+    <div [ngClass]="{'published':status === 1, 'unpublished':status === 2, 'draft':status === 3}" class="project-status">{{status === 1?'OPENED':status === 2?'CLOSED':'UNPUBLISHED'}}</div>
+  </div>
+  <h3 class="project-item-title">
+    {{title}}
+  </h3>
+  <p class="project-item-excerpt">
+    {{excerpt}}
+  </p>
+</div>

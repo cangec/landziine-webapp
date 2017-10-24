@@ -1,0 +1,23 @@
+<div class="open-jobs-container">
+  <div class="section-title-container">
+    <h1 class="section-title">OPEN JOBS</h1>
+  </div>
+  <div class="lz-custom-container">
+    <div class="jobs-carousel-container">
+      <swiper [config]="swiperConfig">
+        <div class="swiper-wrapper">
+          <app-open-job-card [listing]="item" class="swiper-slide" *ngFor="let item of jobListings"></app-open-job-card>
+        </div>
+      </swiper>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next swiper-button-next-job">
+        <i class="nc-icon nc-tail-right square white-bg"></i>
+      </div>
+      <div class="swiper-button-prev swiper-button-prev-job">
+        <i class="nc-icon nc-tail-left square white-bg"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+

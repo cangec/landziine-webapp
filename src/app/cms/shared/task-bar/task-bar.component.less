@@ -1,0 +1,28 @@
+@import "../../../../variables";
+
+.task-bar-container{
+  width: 100%;
+  border-top: 1px solid @borderGrey;
+  border-bottom: 1px solid @borderGrey;
+  min-height: 49px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  .search-container{
+    position: relative;
+    .search-input {
+      padding-left: 30px;
+      border: 1px solid @borderGrey;
+      border-radius: 5px;
+      height: 37px;
+    }
+    .search-icon {
+      position: absolute;
+      padding: 11px 10px;
+      color: @borderGrey;
+    }
+  }
+
+}

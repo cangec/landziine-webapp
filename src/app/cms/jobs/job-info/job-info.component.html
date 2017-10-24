@@ -1,0 +1,55 @@
+<div class="cms-well">
+  <h1 class="cms-title">Public info</h1>
+  <div class="lz-form">
+    <div class="lz-form-group">
+      <label class="lz-label" for="name">Position</label>
+      <input placeholder="Name of your studio" class="lz-input" id="name" type="text">
+    </div>
+    <div class="lz-form-group">
+      <label class="lz-label" for="philosophy">Description</label>
+      <textarea placeholder="Tell others something about your studio" id="philosophy" class="lz-textarea"></textarea>
+    </div>
+    <div class="lz-form-group">
+      <label class="lz-label">Date</label>
+      <div class="datepicker-container">
+        <ng-datepicker [options]="options" [(ngModel)]="date"></ng-datepicker>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="cms-well">
+  <h1 class="cms-title inline-block">Applicants</h1>
+  <div class="pull-right">
+    <div [containerClass]="'lz-tooltip'" [tooltip]="emailAllTemplate" class="applicants-icon-container">
+      <i class="nc-icon nc-email-84"></i>
+    </div>
+    <div [containerClass]="'lz-tooltip'" [tooltip]="emailAllTemplate" class="applicants-icon-container">
+      <i class="nc-icon nc-print-round"></i>
+    </div>
+  </div>
+
+  <div class="applicants-container">
+    <app-applicant [name]="'Joze Potrebujes'"></app-applicant>
+    <app-applicant [name]="'Joze Potrebujes'"></app-applicant>
+    <app-applicant [name]="'Joze Potrebujes'"></app-applicant>
+    <app-applicant [name]="'Joze Potrebujes'"></app-applicant>
+    <app-applicant [name]="'Joze Potrebujes Ful Dolgo Ime Ker Se Je Mama Delala Norce Ko Je Bila Mlada'"></app-applicant>
+  </div>
+  <div class="applicants-pagination">
+    <div class="page page-active">1</div>
+    <div class="page">2</div>
+    <div class="next-page page">
+      <i class="nc-icon nc-tail-right"></i>
+    </div>
+  </div>
+</div>
+
+<!-- TOOLTIP TEMPLATE -->
+<ng-template #emailAllTemplate>
+
+  <h4 class="tooltip-title">Add to Leaders or remove from team</h4>
+  <p class="tooltip-text">
+    Send email to all applicants, something something, something.
+  </p>
+
+</ng-template>

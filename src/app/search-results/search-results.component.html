@@ -1,0 +1,48 @@
+<app-header></app-header>
+<app-result-map></app-result-map>
+<div class="search-content-container">
+  <!-- SEARCH BOX -->
+  <div class="search-box-wrapper">
+    <app-search-box></app-search-box>
+  </div>
+  <!-- advanced-search -->
+  <app-advanced-search></app-advanced-search>
+</div>
+
+
+<div class="search-results-container">
+  <div class="found-results">
+    Found <span class="bold">2 Landscape</span> studios and <span class="bold"> 15 landscape architects</span>.
+  </div>
+
+  <div class="results-container">
+    <h1 class="results-title">LANDSCAPE STUDIOS</h1>
+    <div class="results">
+      <div *ngFor="let item of studioListings" class="studios-card">
+        <app-swiper-card  [listing]="item"></app-swiper-card>
+      </div>
+    </div>
+
+    <div class="pagination">
+      <div class="page active">1</div>
+      <div class="page">2</div>
+      <div class="page next"><i class="nc-icon nc-tail-right"></i> </div>
+    </div>
+  </div>
+
+  <div class="results-container">
+    <h1 class="results-title">ARCHITECTS</h1>
+    <div class="results">
+      <div *ngFor="let item of studioListings" class="studios-card">
+        <app-swiper-card  [listing]="item"></app-swiper-card>
+      </div>
+    </div>
+    <div class="pagination">
+      <div class="page active">1</div>
+      <div class="page">2</div>
+      <div class="page next"><i class="nc-icon nc-tail-right"></i> </div>
+    </div>
+  </div>
+
+</div>
+<app-footer></app-footer>

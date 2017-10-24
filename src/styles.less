@@ -1,1 +1,382 @@
+@import "variables";
+@import "../node_modules/font-awesome/less/font-awesome";
+
 /* You can add global styles to this file, and also import other style files */
+
+body{
+  font-family: "azo-sans-web";
+  color: @text;
+}
+
+.logo-container{
+  position: absolute;
+  top:15px;
+  left: 15px;
+  display: table;
+  .logo-back-icon{
+    background-color: @blue;
+    width: 43px;
+    height: 43px;
+    text-align: center;
+    line-height: 43px;
+    font-size: 17px;
+    color: #fff;
+    display: inline-block;
+    margin-right: 15px;
+  }
+
+  .logo{
+    width: 170px;
+    height: 25px;
+    background-image: url("assets/images/logo.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+}
+h1,h2,h3,h4{
+  margin: 0;
+  font-family: 'Inconsolata', monospace;
+}
+
+p{
+  margin: 0;
+}
+
+button{
+  outline: none;
+  border: none;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: @placeholder;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: @placeholder;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: @placeholder;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: @placeholder;
+}
+
+.light-grey{
+  color: @lightGrey;
+}
+
+.underline{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+/*FORM*/
+
+.lz-form{
+  .lz-form-group{
+    margin-bottom: 10px;
+    .lz-label{
+      color: @text;
+    }
+
+    .lz-input{
+      width: 100%;
+      border: none;
+      background-color: @inputBg;
+      color: @darkGrey;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 2px;
+    }
+
+    //datepicker
+    .ngx-datepicker-input{
+      background-color: @inputBg;
+      color: @darkGrey;
+      padding: 10px !important;
+      font-size: 16px !important;
+      border-radius: 2px;
+      border: none !important;
+      cursor: pointer;
+    }
+
+    .is-selected{
+      background-color: @blue !important;
+    }
+    .ngx-datepicker-calendar-container{
+      top: 45px !important;
+      z-index: 1;
+    }
+
+
+    .lz-textarea{
+      display: block;
+      width: 100%;
+      min-height: 110px;
+      background-color: @inputBg;
+      border: none;
+      border-radius: 2px;
+      font-size: 16px;
+      padding: 10px;
+    }
+  }
+}
+
+/*TAG INPUT OVERRIDE*/
+
+.ng2-tag-input{
+  border-bottom: none !important;
+  background-color: @inputBg;
+}
+
+.ng2-tags-container{
+  padding-left: 10px;
+  padding-right: 10px;
+  .ng-trigger {
+    height: 23px !important;
+    border-radius: 2px !important;
+    line-height: 23px !important;
+    background-color: @blue !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    margin-top: 7px !important;
+  }
+  svg{
+    height: 24px !important;
+  }
+  delete-icon[role=button]:hover{
+    transform: none !important;
+  }
+}
+
+.no-padding{
+  padding: 0px;
+}
+
+.down-icon{
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+}
+
+/*PORTFOLIO*/
+
+.portfolio-title{
+  color: @blue;
+  font-size: 32px;
+  line-height: 36px;
+}
+
+.portfolio-description{
+  line-height: 41px;
+  font-size: 21px;
+  margin-top: 30px;
+}
+
+.tag-input{
+  background-color: @inputBg;
+  font-family: "azo-sans-web" !important;
+  font-size: 16px !important;
+  color: @darkGrey !important;
+  padding-left: 0 !important;
+}
+
+/*Buttons*/
+
+.lz-btn{
+  border-radius: 2px;
+  height: 42px;
+  line-height: 42px;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.default-btn{
+  background-color: @blue;
+}
+
+.light-btn{
+  background-color: @lightPurple;
+}
+
+.green{
+  color: @green;
+}
+
+.section-title-container{
+  .section-title{
+    font-weight: bold;
+    font-size: 26px;
+    font-family: "azo-sans-web";
+  }
+}
+
+/*SWIPER*/
+
+swiper{
+  height: 500px;
+  width: 100%;
+  box-shadow: 0 33px 65px 0 rgba(0,0,0,0.16);
+}
+
+.swiper-wrapper {
+  box-sizing: border-box;
+}
+
+.swiper-button-disabled{
+  display: none;
+}
+
+.swiper-button-next, .swiper-button-prev, .swiper-button-next-job, .swiper-button-prev-job{
+  width: 71px;
+  height: 71px;
+  background-color: #fff;
+  background-image: none;
+  margin-top: -36px;
+  text-align: center;
+  line-height: 71px;
+  font-size: 32px;
+}
+
+.lz-swiper-container:hover{
+  cursor: url("assets/images/More-Cursor.svg"), auto;
+}
+
+.lz-custom-container{
+  width: 100%;
+  padding-left: 3%;
+}
+
+.white-bg{
+  background-color: #fff !important;
+}
+
+
+/*CMS*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.cms-content-container{
+  background-color: @backgroundGrey;
+  min-height: calc(~"100vh - 132px");
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+.cms-title{
+  color: @darkGrey;
+  font-family: 'Inconsolata', monospace;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.cms-well{
+  width: 100%;
+  background-color: #fff;
+  padding: 18px 15px;
+  border-radius: 2px;
+  margin-bottom: 15px;
+
+  .cms-well-title{
+    font-weight: bold;
+    color: @darkGrey;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+  }
+
+  .dropdown-instructions-container{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    .instructions{
+        color: @darkGrey;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        font-style: italic;
+        margin-bottom: 15px;
+    }
+
+  }
+}
+
+.inline-block{
+  display: inline-block;
+}
+
+.lz-tooltip{
+  opacity: 1;
+  .tooltip-inner{
+    background-color: #fff;
+    color: @darkGrey;
+    opacity: 1;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.27);
+    min-width: 300px;
+    padding: 10px;
+  }
+
+  .tooltip-arrow{
+    border-top-color: #fff !important;
+  }
+
+  .tooltip-title{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+  }
+
+  .tooltip-text{
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    color: @tooltipTextGrey;
+  }
+}
+
+.gu-transit {
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+}
+
+////////// MARKER POPUP
+
+.si-float-wrapper{
+  margin-top: 10px;
+}
+
+.si-wrapper-top{
+  min-width: 250px;
+}
+
+.si-content-wrapper{
+  border: none !important;
+  padding: 15px;
+  border-radius: 0;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.27);
+}
+
+.marker-container{
+  font-size: 12px;
+  b{
+    color: #000;
+  }
+  p{
+    color: @grey;
+  }
+}
+
+

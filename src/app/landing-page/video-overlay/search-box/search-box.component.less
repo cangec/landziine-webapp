@@ -1,0 +1,50 @@
+@import "../../../../variables";
+
+.search-box-container{
+  background-color: #fff;
+  width: 723px;
+  min-height: 76px;
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.12);
+  margin-top: 46px;
+  overflow: visible;
+  position: relative;
+  .search-box-item{
+    float: left;
+    padding: 28px 15px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .search-box-input{
+    border-right: 1px solid @placeholder;
+    padding:27px 19px;
+    float: left;
+    .search{
+      border: none;
+
+    }
+
+    input:focus{
+      outline: none !important;
+    }
+  }
+
+  .city-container{
+    border-right: 1px solid @borderGrey;
+  }
+
+  .submit{
+
+    color: @blue;
+    font-weight: 700;
+    padding: 28px 19px;
+
+  }
+
+  .sitting-man{
+    position: absolute;
+    top: -37px;
+    right: -10px;
+    z-index: 0;
+  }
+}

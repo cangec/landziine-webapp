@@ -1,0 +1,25 @@
+<div class="employee">
+  <div class="avatar" [containerClass]="'lz-tooltip'" [tooltip]="avatarTooltip">
+
+
+    <div class="hover-container">
+      <div class="star-container">
+        <i class="fa fa-star-o" aria-hidden="true"> </i>
+      </div>
+      <div class="delete-container">
+        <i class="nc-icon nc-simple-remove"></i>
+      </div>
+    </div>
+
+  </div>
+  <div class="name">Katy Bor doladfh sdfh</div>
+  <!-- TOOLTIP TEMPLATE -->
+  <ng-template #avatarTooltip>
+
+    <h4 class="tooltip-title">Add to Leaders or remove from team</h4>
+    <p class="tooltip-text">
+      Send email to all applicants, something something, something.
+    </p>
+
+  </ng-template>
+</div>

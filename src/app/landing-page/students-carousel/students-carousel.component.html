@@ -1,0 +1,24 @@
+<div class="students-container">
+  <div class="section-title-container">
+
+    <h1 class="section-title">STUDENTS</h1>
+  </div>
+
+  <div class="lz-custom-container">
+    <div class="lz-swiper-container">
+      <swiper [config]="swiperConfig">
+        <div class="swiper-wrapper">
+          <app-swiper-card [listing]="item" class="swiper-slide" *ngFor="let item of students"></app-swiper-card>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next">
+          <i class="nc-icon nc-tail-right square white-bg"></i>
+        </div>
+        <div class="swiper-button-prev">
+          <i class="nc-icon nc-tail-left square white-bg"></i>
+        </div>
+      </swiper>
+    </div>
+  </div>
+  <img src="../../../assets/images/Section-3-2.svg" class="blue-shape">
+</div>

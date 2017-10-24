@@ -1,0 +1,18 @@
+<div class="result-map-container">
+
+  <div class="header-fleha"></div>
+
+  <agm-map [styles]="gmaps.styles" [scrollwheel]="false" [latitude]="lat" [longitude]="lng">
+    <agm-marker  [iconUrl]="'../../../assets/images/pin-landezine.png'" [latitude]="lat" [longitude]="lng">
+      <agm-snazzy-info-window [isOpen]="true" [latitude]="51.673858" [longitude]="7.815982" [closeWhenOthersOpen]="true">
+        <ng-template>
+          <div class="marker-container">
+            <b>Base studio</b>
+            <p class="map-marker-desc">Short desc of the studio</p>
+          </div>
+
+        </ng-template>
+      </agm-snazzy-info-window>
+    </agm-marker>
+  </agm-map>
+</div>

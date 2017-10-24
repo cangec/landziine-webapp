@@ -1,0 +1,15 @@
+<div class="video-block-container">
+  <div class="cms-well">
+    <h2 class="cms-well-title">
+      {{title}}{{embedCode}}
+    </h2>
+    <div [innerHTML]="embedCode | sanitize">
+    </div>
+    <div class="lz-form">
+
+      <div class="lz-form-group">
+        <textarea [(ngModel)]="embedCode" placeholder="Paste video embed code" id="philosophy" class="lz-textarea"></textarea>
+      </div>
+    </div>
+  </div>
+</div>

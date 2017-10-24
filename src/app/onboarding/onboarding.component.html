@@ -1,0 +1,8 @@
+<!-- step 1 -->
+<app-join *ngIf="showJoin" (onLogin)="showJoin = false" ></app-join>
+
+<!-- step 2 -->
+<app-welcome *ngIf="!showJoin && !welcomeDone" (onWelcomeDone)="welcomeDone = true;"></app-welcome>
+
+<!-- step 3 -->
+<app-step-3 *ngIf="!showJoin && welcomeDone"></app-step-3>

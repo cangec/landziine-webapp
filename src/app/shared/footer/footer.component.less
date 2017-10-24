@@ -1,0 +1,40 @@
+@import "../../../variables";
+
+.footer-container{
+  background: @bgGrey url("../../../assets/images/Footer.svg");
+  min-height: 586px;
+  width: 100%;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  padding-top: 112px;
+  position: relative;
+  .footer-logo{
+    width: 157px;
+    margin-bottom: 30px;
+  }
+
+  .links-without-logo{
+    margin-top: 50px;
+  }
+
+  .footer-links{
+    .footer-link{
+     font-size: 20px;
+      margin-bottom: 15px;
+      cursor: pointer;
+      word-break: break-all;
+    }
+
+    .footer-link:hover{
+      color: @blue;
+    }
+  }
+
+  .footer-credits{
+    position: absolute;
+    width: 100%;
+    bottom: 15px;
+    opacity: 0.2;
+    text-align: center;
+  }
+}

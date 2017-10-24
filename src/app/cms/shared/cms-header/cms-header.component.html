@@ -1,0 +1,53 @@
+<div class="cms-header-container">
+  <div class="cms-logo-container">
+    <div [routerLink]="['/']"  class="cms-logo"></div>
+    <div class="cms-sign">CMS</div>
+  </div>
+
+  <div class="cms-nav-container">
+    <div [routerLinkActive]="['active-link']" [routerLink]="['/cms']" [routerLinkActiveOptions]="{exact:true}" class="cms-nav-link">
+      General info
+      <div class="active-indicator"></div>
+    </div>
+    <div [routerLinkActive]="['active-link']" [routerLink]="['/cms/projects']" [routerLinkActiveOptions]="{exact:true}"  class="cms-nav-link">
+      Projects
+      <div class="active-indicator"></div>
+    </div>
+    <div [routerLinkActive]="['active-link']" [routerLink]="['/cms/jobs']" class="cms-nav-link">
+      Jobs
+      <div class="active-indicator"></div>
+    </div>
+  </div>
+
+  <div class="cms-header-right-container" >
+    <div class="dropdown-wrapper" dropdown>
+      <div class="studio-dropdown" dropdownToggle >
+        <div class="dropdown-icon">
+          <i class="nc-icon nc-small-triangle-down"></i>
+        </div>
+        <div class="avatar"></div>
+        <div class="title-type">
+          <div class="title">
+            BASE STUDIO
+          </div>
+          <div class="type">
+            Company
+          </div>
+        </div>
+      </div>
+      <ul *dropdownMenu class="dropdown-menu" role="menu">
+        <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+        <li class="divider dropdown-divider"></li>
+        <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="post-a-job">
+      <p>Post a job</p>
+    </div>
+  </div>
+
+</div>

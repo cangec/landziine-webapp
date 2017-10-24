@@ -1,0 +1,139 @@
+@import "../../../../variables";
+
+.cms-header-container{
+  min-height: 83px;
+  width: 100%;
+  .cms-logo-container{
+    float: left;
+    width: 170px;
+    margin-top: 15px;
+    margin-left: 15px;
+    .cms-logo{
+      width: 170px;
+      height: 25px;
+      background-image: url("../../../../assets/images/logo.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+
+    .cms-sign{
+      float: right;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+
+  .cms-nav-container{
+    float: left;
+    margin-left: 30px;
+    text-align: center;
+
+    .cms-nav-link{
+      display: inline-block;
+      padding-left: 10px;
+      padding-right: 10px;
+      height: 83px;
+      line-height: 83px;
+      cursor: pointer;
+      font-weight: bold;
+      font-family: 'Roboto', sans-serif;
+      position: relative;
+
+
+      .active-indicator{
+        width: 100%;
+        height: 7px;
+        background-color: @blue;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: none;
+      }
+    }
+
+    .cms-nav-link:active{
+      outline: none;
+    }
+
+    .active-link{
+      color: @blue;
+      .active-indicator{
+        display: block;
+      }
+    }
+  }
+
+  .cms-header-right-container{
+    float: right;
+    line-height: 83px;
+    text-align: right;
+    .post-a-job{
+      display: inline-block;
+      float: right;
+      margin-right: 15px;
+      color: @green;
+      cursor: pointer;
+      font-weight: bold;
+      font-family: 'Roboto', sans-serif;
+    }
+    .post-a-job:hover{
+      text-decoration: underline;
+    }
+    .dropdown-wrapper{
+      float: right;
+      position: relative;
+      .studio-dropdown{
+        display: inline-block;
+        line-height: normal;
+        float: right;
+        margin-right: 15px;
+        margin-top: 15px;
+        padding: 7px;
+        border: 1px solid @lightBorderGrey;
+        border-radius: 2px;
+        cursor: pointer;
+
+        .dropdown-menu{
+          width: 100%;
+
+        }
+
+        .avatar{
+          width: 33px;
+          height: 33px;
+          background-image: url("../../../../assets/images/samples/4.jpg");
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          border-radius: 50%;
+          float: left;
+        }
+
+        .title-type{
+          padding-left: 40px;
+          padding-right: 40px;
+          .title{
+            font-size: 14px;
+            font-family: Roboto;
+            color: @blue;
+          }
+          .type{
+            font-size: 10px;
+            color: @darkGrey;
+            text-align: left;
+          }
+        }
+
+        .dropdown-icon{
+          line-height: normal;
+          float: right;
+          margin-top: 10px;
+        }
+
+      }
+    }
+
+  }
+}

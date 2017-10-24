@@ -1,0 +1,8 @@
+<div routerLink="/profile" class="card-wrapper"  [ngStyle]="{'background': 'radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0.04) 41.5%, #000000 100%), url(' + listing.imgUrl + ')'}">
+  <div class="card" >
+    <div class="text-container">
+      <h1 class="card-title">{{listing.title | truncate : 100 : "..."}}</h1>
+      <p class="card-text">{{listing.location | truncate : 50 : "..."}}</p>
+    </div>
+  </div>
+</div>
