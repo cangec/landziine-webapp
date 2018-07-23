@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GeneralInfoService } from '../../services/general-info.service';
 
 @Component({
   selector: 'app-genral-info',
@@ -7,7 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GenralInfoComponent implements OnInit {
 
-  constructor() { }
+  generalInfo;
+  generalInfoIndividual;
+  role;
+
+  constructor(private generalInfoService: GeneralInfoService) {
+
+    this.generalInfo = generalInfoService.generalInfo;
+    this.generalInfoIndividual = generalInfoService.generalInfoIndividual;
+    this.role = 'COMPANY';
+
+  }
+
+  update() {
+    console.log(this.generalInfo);
+  }
+
+  switchRole(role) {
+    console.log(role);
+    this.role = role;
+  }
 
   ngOnInit() {
   }

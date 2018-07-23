@@ -4,12 +4,17 @@
   </h2>
   <div class="architects-list">
     <div class="employees-container">
-        <app-architect-avatar></app-architect-avatar>
-        <app-architect-avatar></app-architect-avatar>
-        <app-architect-avatar></app-architect-avatar>
-        <app-architect-avatar></app-architect-avatar>
-        <app-architect-avatar></app-architect-avatar>
-        <app-architect-avatar></app-architect-avatar>
+      <!-- ARCHITECT COMOPNENT -->
+      <app-architect-avatar (onDeleteArchitect)="deleteArchitect($event)" [architect]="architect" *ngFor="let architect of architects; let i = index"></app-architect-avatar>
+      <div (click)="addTeammate()" class="add-architect">
+        <div class="avatar">
+          <i class="nc-icon nc-small-add"></i>
+        </div>
+        <div class="name">
+          Add <br/> teammate
+        </div>
+      </div>
     </div>
+
   </div>
 </div>

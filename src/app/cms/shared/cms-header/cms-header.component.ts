@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+
 
 @Component({
   selector: 'app-cms-header',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CmsHeaderComponent implements OnInit {
 
-  constructor() { }
+  @Output() onChangeRole = new EventEmitter<any>();
+  @Input() role;
+
+  constructor() {
+  }
 
   ngOnInit() {
+  }
+
+  switchRole() {
+
+    this.role = this.role === 'INDIVIDUAL' ? 'COMPANY' : 'INDIVIDUAL';
+    this.onChangeRole.emit(this.role);
+
   }
 
 }

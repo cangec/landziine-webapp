@@ -20,6 +20,11 @@
     vertical-align: middle;
     display: inline-block;
     cursor: pointer;
+
+    &.white-logo{
+      background-image: url("../../../assets/images/logo-white.svg");
+      background-size: 203px;
+    }
   }
 
   .nav-links{
@@ -33,6 +38,12 @@
     }
     .nav-link:last-child{
       margin-right: 0;
+    }
+
+    &.white-links{
+      .nav-link{
+        color: #fff;
+      }
     }
   }
 }

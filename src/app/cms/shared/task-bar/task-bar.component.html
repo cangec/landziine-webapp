@@ -7,7 +7,7 @@
     </div>
   </div>
   <div class="pull-right">
-    <app-update-btn-dropdown></app-update-btn-dropdown>
+    <app-update-btn-dropdown (onUpdate)="update()" (onDelete)="delete()" (onUnpublish)="unpublish()"></app-update-btn-dropdown>
   </div>
 
 </div>

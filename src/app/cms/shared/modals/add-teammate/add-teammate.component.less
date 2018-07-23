@@ -1,0 +1,64 @@
+@import "../../../../../variables";
+
+.modal-header{
+  border-bottom: none;
+}
+
+.search-teammates-container{
+  .modal-well{
+
+      width: 100%;
+      border: 1px solid #DEDEDE;
+      border-radius: 2px;
+      background-color: @inputBg;
+      padding: 10px;
+      margin-bottom: 15px;
+    .search-container{
+      position: relative;
+      margin-bottom: 10px;
+      .search-input {
+        padding-left: 30px;
+        border: 1px solid @borderGrey;
+        border-radius: 5px;
+        height: 37px;
+        width: 100%;
+      }
+      .search-icon {
+        position: absolute;
+        padding: 11px 10px;
+        color: @borderGrey;
+      }
+    }
+
+    .teammate-list{
+      width: 100%;
+      max-height: 205px;
+      border-radius: 2px;
+      border: 1px solid #d5d5d5;
+      overflow-y: auto;
+
+      .teammate{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 15px 30px 15px 10px;
+        position: relative;
+        cursor: pointer;
+
+        .selected-icon{
+          position: absolute;
+          right: 10px;
+          color: @blue;
+          font-size: 22px;
+          top: 14px;
+        }
+
+      }
+
+      .teammate:nth-child(even) {
+        background: #fff;
+      }
+    }
+
+  }
+}

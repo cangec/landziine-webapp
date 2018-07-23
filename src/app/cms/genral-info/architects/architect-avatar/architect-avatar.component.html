@@ -1,18 +1,17 @@
 <div class="employee">
-  <div class="avatar" [containerClass]="'lz-tooltip'" [tooltip]="avatarTooltip">
-
+  <div class="avatar" [ngStyle]="{'background-image': 'url(' + architect.profileImage.thumbUrl + ')'}" [containerClass]="'lz-tooltip'" [tooltip]="avatarTooltip">
 
     <div class="hover-container">
       <div class="star-container">
         <i class="fa fa-star-o" aria-hidden="true"> </i>
       </div>
-      <div class="delete-container">
+      <div (click)="deleteArchitect()" class="delete-container">
         <i class="nc-icon nc-simple-remove"></i>
       </div>
     </div>
 
   </div>
-  <div class="name">Katy Bor doladfh sdfh</div>
+  <div class="name">{{architect.name}}</div>
   <!-- TOOLTIP TEMPLATE -->
   <ng-template #avatarTooltip>
 

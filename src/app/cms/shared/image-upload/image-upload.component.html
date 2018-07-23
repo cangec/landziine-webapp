@@ -1,11 +1,41 @@
-<div class="image-upload-container">
+<div
+  ng2FileDrop
+  [ngClass]="{'file-over': hasBaseDropZoneOver}"
+  (fileOver)="fileOverBase($event)"
+  (onFileDrop)="fileDropped($event)"
+  [uploader]="uploader"
+  class="image-upload-container">
   <div class="cms-well">
     <h2 class="cms-well-title">
       {{title}}
     </h2>
-    <div class="dropdown-instructions-container">
-      <p class="instructions">Drag and Drop files with extension JPG or PNG.</p>
-      <button class="lz-btn light-btn">Select image</button>
+    <div *ngIf="!uploading" class="select-state">
+      <div (click)="remove()" *ngIf="removeIcon" class="remove-block-icon">
+        <i class="nc-icon nc-simple-remove"></i>
+      </div>
+      <div class="dropdown-instructions-container">
+        <p class="instructions">Drag and Drop files with extension JPG or PNG.</p>
+        <button class="lz-btn light-btn">Select image</button>
+      </div>
     </div>
+
+    <div class="file-over-state">
+      <div class="drop-icon-container bordered">
+        <i class="nc-icon nc-tail-down"></i>
+      </div>
+      <p class="instructions">Drop and upload an image</p>
+    </div>
+    <div  *ngIf="uploading" class="file-uploading-state">
+      <div class="drop-icon-container bordered">
+        <i class="nc-icon nc-tail-down"></i>
+      </div>
+      <br/>
+      <p class="instructions">Uploading image - 87% complete</p>
+
+      <div class="upload-progress-container">
+        <div class="lz-progress-bar"></div>
+      </div>
+    </div>
+
   </div>
 </div>

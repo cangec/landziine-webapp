@@ -10,11 +10,15 @@
       <div class="active-indicator"></div>
     </div>
     <div [routerLinkActive]="['active-link']" [routerLink]="['/cms/projects']" [routerLinkActiveOptions]="{exact:true}"  class="cms-nav-link">
-      Projects
+      {{role === 'INDIVIDUAL'? 'CV': 'Portfolio'}}
       <div class="active-indicator"></div>
     </div>
-    <div [routerLinkActive]="['active-link']" [routerLink]="['/cms/jobs']" class="cms-nav-link">
+    <div *ngIf="role === 'COMPANY'" [routerLinkActive]="['active-link']" [routerLink]="['/cms/jobs']" class="cms-nav-link">
       Jobs
+      <div class="active-indicator"></div>
+    </div>
+    <div *ngIf="role === 'COMPANY'" class="cms-nav-link">
+      Projects
       <div class="active-indicator"></div>
     </div>
   </div>
@@ -28,24 +32,32 @@
         <div class="avatar"></div>
         <div class="title-type">
           <div class="title">
-            BASE STUDIO
+            {{role === 'INDIVIDUAL'?'Janez Novak':'Base Studio'}}
           </div>
           <div class="type">
-            Company
+            {{role === 'INDIVIDUAL'?'Individual':'Company'}}
           </div>
         </div>
       </div>
       <ul *dropdownMenu class="dropdown-menu" role="menu">
-        <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
-        <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
-        <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
-        <li class="divider dropdown-divider"></li>
-        <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+        <li (click)="switchRole()" class="header-dropdown-li" role="menuitem">
+          <a class="dropdown-item">
+            <div class="avatar"></div>
+            <div class="title-type">
+              <div class="title">
+                {{role === 'INDIVIDUAL'?'Base Studio':'Janez Novak'}}
+              </div>
+
+              <div class="type">
+                {{role === 'INDIVIDUAL'?'Company':'Individual'}}
+              </div>
+            </div>
+          </a>
         </li>
       </ul>
     </div>
 
-    <div class="post-a-job">
+    <div *ngIf="role === 'COMPANY'" class="post-a-job">
       <p>Post a job</p>
     </div>
   </div>

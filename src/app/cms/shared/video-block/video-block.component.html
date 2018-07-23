@@ -1,14 +1,22 @@
 <div class="video-block-container">
   <div class="cms-well">
     <h2 class="cms-well-title">
-      {{title}}{{embedCode}}
+      <span class="fa fa-th-list"></span>
+      {{title}}
     </h2>
-    <div [innerHTML]="embedCode | sanitize">
+    <div (click)="remove()" *ngIf="removeIcon" class="remove-block-icon">
+      <i class="nc-icon nc-simple-remove"></i>
+    </div>
+    <div class="video-container" *ngIf="embedCode && parsedVideoId" [innerHTML]="embedCode | sanitize">
+
+    </div>
+    <div class="video-container" *ngIf="embedCode && !parsedVideoId">
+      The url is not valid.
     </div>
     <div class="lz-form">
 
       <div class="lz-form-group">
-        <textarea [(ngModel)]="embedCode" placeholder="Paste video embed code" id="philosophy" class="lz-textarea"></textarea>
+        <textarea (ngModelChange)="valueChange($event)" [(ngModel)]="embedCode" placeholder="Paste Youtube video link" id="videolink" class="lz-textarea"></textarea>
       </div>
     </div>
   </div>

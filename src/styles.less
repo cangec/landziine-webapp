@@ -47,6 +47,11 @@ p{
   margin: 0;
 }
 
+
+iframe{
+  width: 100%;
+}
+
 button{
   outline: none;
   border: none;
@@ -81,8 +86,66 @@ button{
 /*FORM*/
 
 .lz-form{
+
+  .radio-container{
+
+    display: inline-block;
+
+    [type="radio"]:checked,
+    [type="radio"]:not(:checked) {
+      position: absolute;
+      left: -9999px;
+    }
+    [type="radio"]:checked + label,
+    [type="radio"]:not(:checked) + label
+    {
+      position: relative;
+      padding-left: 32px;
+      cursor: pointer;
+      line-height: 26px;
+      display: inline-block;
+      color: @text;
+    }
+    [type="radio"]:checked + label:before,
+    [type="radio"]:not(:checked) + label:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 24px;
+      height: 24px;
+      border: 2px solid @darkGrey;
+      border-radius: 100%;
+      background: #fff;
+    }
+    [type="radio"]:checked + label:after,
+    [type="radio"]:not(:checked) + label:after {
+
+      content: '';
+      width: 14px;
+      height: 14px;
+      background: @darkGrey;
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      border-radius: 100%;
+      transition: all 0.2s ease;
+      -webkit-transition: all 0.2s ease;
+    }
+    [type="radio"]:not(:checked) + label:after {
+      opacity: 0;
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+    [type="radio"]:checked + label:after {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+
   .lz-form-group{
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     .lz-label{
       color: @text;
     }
@@ -95,6 +158,34 @@ button{
       padding: 10px;
       font-size: 16px;
       border-radius: 2px;
+    }
+
+    .lz-education-button{
+      background-color: @inputBg;
+      width: 100%;
+      position: relative;
+      padding: 10px;
+      color: @darkGrey;
+      font-size: 16px;
+      border-radius: 2px;
+      cursor: pointer;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-right: 40px;
+
+      i{
+        position: absolute;
+        right: 8px;
+        width: 27px;
+        height: 27px;
+        background-color: #fff;
+        text-align: center;
+        line-height: 27px;
+        border-radius: 50%;
+        font-size: 14px;
+        top: 9px;
+      }
     }
 
     //datepicker
@@ -210,6 +301,14 @@ button{
 
 .light-btn{
   background-color: @lightPurple;
+  -webkit-transition: background-color .2s ease-out;
+  -moz-transition: background-color .2s ease-out;
+  -o-transition: background-color .2s ease-out;
+  transition: background-color .2s ease-out;
+}
+
+.light-btn:hover{
+  background-color: @purple;
 }
 
 .green{
@@ -232,6 +331,13 @@ swiper{
   box-shadow: 0 33px 65px 0 rgba(0,0,0,0.16);
 }
 
+.swiper-outer{
+  .swiper-container, .swiper-container-horizontal {
+    position: inherit;
+    overflow: visible;
+  }
+}
+
 .swiper-wrapper {
   box-sizing: border-box;
 }
@@ -249,6 +355,11 @@ swiper{
   text-align: center;
   line-height: 71px;
   font-size: 32px;
+  z-index: 9;
+
+  &.light-border{
+    border: 1px solid #efefef;
+  }
 }
 
 .lz-swiper-container:hover{
@@ -263,6 +374,8 @@ swiper{
 .white-bg{
   background-color: #fff !important;
 }
+
+
 
 
 /*CMS*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -288,32 +401,38 @@ swiper{
   padding: 18px 15px;
   border-radius: 2px;
   margin-bottom: 15px;
-
+  position: relative;
   .cms-well-title{
     font-weight: bold;
     color: @darkGrey;
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 1px;
+    margin-bottom: 10px;
   }
 
-  .dropdown-instructions-container{
+  .remove-block-icon{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: #000;
+    font-size: 12px;
+    width: 21px;
+    height: 21px;
+    background-color: @lightGrey;
     text-align: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    .instructions{
-        color: @darkGrey;
-        font-family: 'Roboto', sans-serif;
-        font-size: 14px;
-        font-style: italic;
-        margin-bottom: 15px;
-    }
-
+    line-height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
   }
 }
 
 .inline-block{
   display: inline-block;
+}
+
+.italic{
+  font-style: italic;
 }
 
 .lz-tooltip{
@@ -379,4 +498,61 @@ swiper{
   }
 }
 
+.close-btn{
+  width: 22px;
+  height: 22px;
+  background-color: #f7f7f7;
+  border-radius: 50%;
+  font-size: 15px;
+  text-align: center;
+  line-height: 22px;
+  font-weight: bold;
+}
+
+/////////////// FROALA TEXT EDITOR
+
+.fr-toolbar{
+  border-top: none;
+}
+
+// PROMPT CSS
+
+.prompt-header{
+  display: none;
+}
+
+.prompt-body{
+  padding: 15px;
+  input{
+    display: none;
+  }
+}
+
+.prompt-footer{
+  text-align: right;
+  padding: 15px;
+  .lz-btn{
+    margin-left: 5px;
+    height: 28px;
+    line-height: 28px;
+  }
+
+  .light-btn{
+    float: right;
+  }
+}
+
+
+/***************** MODAL **********////
+
+.modal-title{
+  font-size: 24px;
+  font-weight: 500;
+  color: @text;
+  font-family: 'Inconsolata', monospace;
+}
+
+.modal-footer{
+ border-top: none;
+}
 

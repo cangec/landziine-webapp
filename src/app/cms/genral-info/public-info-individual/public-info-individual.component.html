@@ -1,0 +1,35 @@
+<div class="public-info-container">
+  <h1 class="cms-title">Public info</h1>
+  <div class="lz-form">
+    <div class="lz-form-group">
+      <label class="lz-label" for="name">Name</label>
+      <input [(ngModel)]="publicInfoIndividual.name" placeholder="Name of your studio" class="lz-input" id="name" type="text">
+    </div>
+    <div class="lz-form-group">
+      <label class="lz-label" for="philosophy">Description</label>
+      <textarea [(ngModel)]="publicInfoIndividual.philosophy" placeholder="Edit your description" id="philosophy" class="lz-textarea"></textarea>
+    </div>
+    <div class="lz-form-group">
+      <label class="lz-label" for="email">Email</label>
+      <input [(ngModel)]="publicInfoIndividual.email" placeholder="Your email" class="lz-input" id="email" type="email">
+    </div>
+    <div class="lz-form-group">
+      <label>Education</label>
+      <div (click)="addEducation()" class="lz-education-button">
+       University of Ljubljana, Faculty of Architecture, Bachelor of Modern Architecture
+          <i class="nc-icon nc-pen-01"></i>
+      </div>
+    </div>
+    <div class="lz-form-group">
+      <label>Education 2</label>
+      <div (click)="addEducation2()" class="lz-education-button">
+        University of Ljubljana, Faculty of Architecture, Bachelor of Modern Architecture
+        <i class="nc-icon nc-pen-01"></i>
+      </div>
+    </div>
+    <div class="lz-form-group">
+      <label class="lz-label" for="website">Website</label>
+      <input [(ngModel)]="publicInfoIndividual.website" class="lz-input" id="website" type="text">
+    </div>
+  </div>
+</div>

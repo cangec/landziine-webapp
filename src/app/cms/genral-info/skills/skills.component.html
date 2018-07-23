@@ -1,0 +1,49 @@
+<div class="public-info-container">
+  <h1 class="cms-title">Skills</h1>
+  <div class="row">
+    <div class="col-sm-6">
+      <label>Skill name</label>
+    </div>
+    <div class="col-sm-6">
+      <label>Skill rating</label>
+    </div>
+  </div>
+  <div class="row">
+    <div *ngFor="let skill of skills" class="skill-row">
+      <div class="col-sm-6">
+        <div class="skill-container">
+          {{skill.name}}
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="skill-rating-container">
+          <div (click)="skill.rating = 1" [ngClass]="{'active':skill.rating === 1}" class="skill-rating left-skill">1</div>
+          <div (click)="skill.rating = 2" [ngClass]="{'active':skill.rating === 2}" class="skill-rating">2</div>
+          <div (click)="skill.rating = 3" [ngClass]="{'active':skill.rating === 3}" class="skill-rating righ-skill">3</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-row add-skill-row">
+      <div class="col-sm-6">
+        <div class="lz-form">
+          <div class="lz-form-group">
+            <input (keyup.enter)="addSkill()" [(ngModel)]="newSkill.name" placeholder="Name your skill" class="lz-input">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="skill-rating-container">
+          <div (click)="newSkill.rating = 1" [ngClass]="{'active':newSkill.rating === 1}" class="skill-rating left-skill">1</div>
+          <div (click)="newSkill.rating = 2" [ngClass]="{'active':newSkill.rating === 2}" class="skill-rating">2</div>
+          <div (click)="newSkill.rating = 3" [ngClass]="{'active':newSkill.rating === 3}" class="skill-rating righ-skill">3</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="add-skill-container text-center">
+    <button (click)="addSkill()" class="lz-btn default-btn">Add a skill</button>
+  </div>
+
+</div>

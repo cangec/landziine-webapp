@@ -25,9 +25,13 @@
         "../node_modules/dragula/dist/dragula.css",
         "../node_modules/snazzy-info-window/dist/snazzy-info-window.css",
         "assets/iconfont/css/style.css",
+        "../node_modules/froala-editor/css/froala_editor.pkgd.min.css",
+        "../node_modules/froala-editor/css/froala_style.min.css",
         "styles.less"
       ],
       "scripts": [
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/froala-editor/js/froala_editor.pkgd.min.js",
         "../node_modules/swiper/dist/js/swiper.js",
         "../node_modules/chart.js/dist/Chart.js"
       ],

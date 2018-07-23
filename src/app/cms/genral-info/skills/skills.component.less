@@ -1,0 +1,58 @@
+@import "../../../../variables";
+
+.public-info-container{
+  border-radius: 2px;
+  background-color: #fff;
+  padding: 18px 15px;
+  margin-bottom: 15px;
+
+  .skill-row{
+
+    margin-bottom: 5px;
+    overflow: auto;
+
+    .skill-container{
+      background-color: @inputBg;
+      width: 100%;
+      position: relative;
+      padding: 10px;
+      color: #2d2d2d;
+      font-size: 16px;
+      border-radius: 2px;
+      cursor: pointer;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .skill-rating-container{
+      display: flex;
+      flex-direction: row;
+
+      .skill-rating{
+        flex-grow: 1;
+        text-align: center;
+        font-size: 16px;
+        color: @lightGrey;
+        background-color: @inputBg;
+        padding: 7px;
+        border: 3px solid rgba(21,49,255,0.43);
+        cursor: pointer;
+      }
+
+      .left-skill{
+        border-radius: 3px 0 0 3px;
+      }
+      .righ-skill{
+        border-radius: 0 3px 3px 0;
+      }
+
+      .active{
+        color: @darkGrey;
+        border: 3px solid @blue;
+      }
+    }
+  }
+
+
+}

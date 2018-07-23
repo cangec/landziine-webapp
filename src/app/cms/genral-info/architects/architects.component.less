@@ -1,9 +1,46 @@
 @import "../../../../variables";
+.architects-list{
+  .employees-container{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 
-.employees-container{
-  margin-top: 30px;
-  margin-bottom: 30px;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+    .add-architect{
+      width: 79px;
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-bottom: 15px;
+      text-align: center;
+      float: left;
+      .avatar{
+        width: 79px;
+        height: 79px;
+        background-color: @lightPurple;
+        margin-bottom: 10px;
+        line-height: 90px;
+        font-size: 44px;
+        -webkit-transition: background-color .2s ease-out;
+        -moz-transition: background-color .2s ease-out;
+        -o-transition: background-color .2s ease-out;
+        transition: background-color .2s ease-out;
+        border-radius: 50%;
+        color: #fff;
+      }
+
+      .avatar:hover{
+        background-color: @purple;
+        cursor: pointer;
+      }
+
+      .name{
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        color: @text;
+      }
+
+    }
+  }
+
 }

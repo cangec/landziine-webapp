@@ -1,15 +1,22 @@
-<app-cms-header></app-cms-header>
-<app-task-bar></app-task-bar>
+<app-cms-header (onChangeRole)="switchRole($event)" [role]="role"></app-cms-header>
+<app-task-bar (onUnpublish)="unpublish()" (onDelete)="delete()" (onUpdate)="update()"></app-task-bar>
 <div class="cms-content-container">
   <div class="container">
     <div class="row">
       <div class="col-lg-6">
-        <app-public-info></app-public-info>
+        <!-- IF COMPANY FORM -->
+        <app-public-info *ngIf="role === 'COMPANY'" [publicInfo]="generalInfo"></app-public-info>
+        <!-- IF INDIVIDUAL FORM -->
+        <app-public-info-individual *ngIf="role === 'INDIVIDUAL'"></app-public-info-individual>
       </div>
       <div class="col-lg-6">
         <app-image-upload [title]="'Cover image'"></app-image-upload>
-        <app-architects></app-architects>
-        <app-image-upload [title]="'Company logo'"></app-image-upload>
+        <!-- IF INDIVIDUAL FORM -->
+        <app-private-info-individual *ngIf="role === 'INDIVIDUAL'"></app-private-info-individual>
+        <app-skills [skills]="generalInfoIndividual.skills" *ngIf="role === 'INDIVIDUAL'"></app-skills>
+        <!-- IF COMPANY FORM -->
+        <app-architects *ngIf="role === 'COMPANY'"  [architects]="generalInfo.architects"></app-architects>
+        <app-image-upload  *ngIf="role === 'COMPANY'" [title]="'Company logo'"></app-image-upload>
       </div>
     </div>
   </div>

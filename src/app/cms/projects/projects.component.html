@@ -1,18 +1,20 @@
 <app-cms-header></app-cms-header>
-<app-task-bar [showSearchBar]="true"></app-task-bar>
-  <div class="cms-content-container">
-    <div class="container-fluid">
+<app-task-bar (onUnpublish)="unpublish()" (onDelete)="delete()" (onUpdate)="update()" [showSearchBar]="false"></app-task-bar>
+  <div class="cms-content-container no-padding-top">
+    <div class="container">
       <div class="row">
-        <div class="col-sm-3">
+        <!--  <div class="col-sm-3">
           <app-projects-listing></app-projects-listing>
-        </div>
-        <div class="col-sm-6">
+        </div>-->
+
+        <div class="col-sm-8">
           <app-project-builder></app-project-builder>
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-4">
           <app-project-blocks></app-project-blocks>
         </div>
       </div>
     </div>
   </div>
+
 <app-cms-footer></app-cms-footer>

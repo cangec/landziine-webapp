@@ -3,27 +3,27 @@
   <div class="lz-form">
     <div class="lz-form-group">
       <label class="lz-label" for="name">Name</label>
-      <input placeholder="Name of your studio" class="lz-input" id="name" type="text">
+      <input [(ngModel)]="publicInfo.name" placeholder="Name of your studio" class="lz-input" id="name" type="text">
     </div>
     <div class="lz-form-group">
       <label class="lz-label" for="philosophy">Philosophy</label>
-     <textarea placeholder="Tell others something about your studio" id="philosophy" class="lz-textarea"></textarea>
+      <textarea [(ngModel)]="publicInfo.philosophy" placeholder="Tell others something about your studio" id="philosophy" class="lz-textarea"></textarea>
     </div>
     <div class="lz-form-group">
       <label class="lz-label" for="email">Email</label>
-      <input class="lz-input" id="email" type="email">
+      <input [(ngModel)]="publicInfo.email" class="lz-input" id="email" type="email">
     </div>
     <div class="lz-form-group">
-      <label class="lz-label" for="country">Address</label>
-      <input class="lz-input" id="country" type="text">
+      <label class="lz-label" for="address">Address</label>
+      <input [(ngModel)]="publicInfo.address" id="address" placeholder="Location of your project" id="location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text"  class="lz-input location-input" #search [formControl]="searchControl">
     </div>
     <div class="lz-form-group">
       <label class="lz-label" for="phone">Phone</label>
-      <input class="lz-input" id="phone" type="text">
+      <input [(ngModel)]="publicInfo.phone" class="lz-input" id="phone" type="text">
     </div>
     <div class="lz-form-group">
       <label class="lz-label" for="website">Website</label>
-      <input class="lz-input" id="website" type="text">
+      <input [(ngModel)]="publicInfo.website" class="lz-input" id="website" type="text">
     </div>
   </div>
 </div>

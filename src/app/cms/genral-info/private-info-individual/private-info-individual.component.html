@@ -1,0 +1,15 @@
+<div class="public-info-container">
+  <h1 class="cms-title">Private info</h1>
+  <div class="lz-form">
+
+    <div class="lz-form-group">
+      <label class="lz-label" for="address">Address</label>
+      <input [(ngModel)]="privateInfoIndividual.address" id="address" placeholder="Location of your project" id="location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text"  class="lz-input location-input" #search [formControl]="searchControl">
+    </div>
+    <div class="lz-form-group">
+      <label class="lz-label" for="phone">Phone</label>
+      <input [(ngModel)]="privateInfoIndividual.phone" class="lz-input" id="phone" type="text">
+    </div>
+  </div>
+</div>
+

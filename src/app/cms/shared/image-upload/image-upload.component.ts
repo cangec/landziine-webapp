@@ -1,4 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FileUploader } from 'ng2-file-upload';
+
+const URL = 'https://evening-anchorage-3159.herokuapp.com/api/';
 
 @Component({
   selector: 'app-image-upload',
@@ -8,10 +11,33 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ImageUploadComponent implements OnInit {
 
   @Input() title;
+  @Input() removeIcon;
+  @Output() onRemove = new EventEmitter<any>();
 
-  constructor() { }
+  uploading = false;
 
-  ngOnInit() {
+
+  public uploader: FileUploader = new FileUploader({url: URL});
+  public hasBaseDropZoneOver: boolean = false;
+
+  public fileOverBase(e: any): void {
+    setTimeout(() => {
+      this.hasBaseDropZoneOver = e;
+    }, 1);
+
+  }
+  public fileDropped(e: any): void {
+    this.uploading = true;
   }
 
+  constructor() {
+  }
+
+  ngOnInit() {
+
+  }
+
+  remove() {
+    this.onRemove.emit();
+  }
 }

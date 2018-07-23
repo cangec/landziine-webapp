@@ -1,13 +1,13 @@
-<div class="projec-blocks-wrapper">
+<div class="project-blocks-wrapper">
   <p class="project-blocks-title">
     Drag and drop blocks
   </p>
 
-  <div class="project-blocks-container">
-    <app-project-block [dragula]="'builder-bag'" [type]="'image'" [attr.data-id]="'image'"></app-project-block>
-    <app-project-block [dragula]="'builder-bag'" [type]="'video'" [attr.data-id]="'video'"></app-project-block>
-    <app-project-block [dragula]="'builder-bag'" [type]="'text'" [attr.data-id]="'text'"></app-project-block>
-    <app-project-block [dragula]="'builder-bag'" [type]="'gallery'" [attr.data-id]="'gallery'"></app-project-block>
+  <div class="project-blocks-container" [dragula]='"page-bag"' id='right'>
+    <app-project-block [type]="'image'" [attr.data-id]="'image'"></app-project-block>
+    <app-project-block [type]="'video'" [attr.data-id]="'video'"></app-project-block>
+    <app-project-block [type]="'text'" [attr.data-id]="'text'"></app-project-block>
+    <app-project-block [type]="'gallery'" [attr.data-id]="'gallery'"></app-project-block>
   </div>
 
 </div>

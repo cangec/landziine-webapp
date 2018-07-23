@@ -8,6 +8,7 @@ import { GenralInfoComponent } from '../cms/genral-info/genral-info.component';
 import { ProjectsComponent } from '../cms/projects/projects.component';
 import { JobsComponent } from '../cms/jobs/jobs.component';
 import { SearchResultsComponent } from '../search-results/search-results.component';
+import { ProjectComponent } from '../project/project.component';
 
 const routes: Routes = [
   {
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path: 'search-results',
     component: SearchResultsComponent,
+  },
+  {
+    path: 'project/:id',
+    component: ProjectComponent,
   },
   {
     // should be at the bottom or routes

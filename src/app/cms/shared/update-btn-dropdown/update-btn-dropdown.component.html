@@ -1,11 +1,11 @@
 <div class="update-btn-container" dropdown>
-  <div class="action-button">Update</div>
+  <div (click)="actionClick(actionType)" class="action-button">{{actionType}}</div>
   <div class="action-dropdown-toggle" dropdownToggle>
     <i class="nc-icon nc-small-down"></i>
   </div>
   <ul *dropdownMenu class="dropdown-menu action-dropdown" role="menu">
-    <li role="menuitem"><a class="dropdown-item" href="#">Update</a></li>
-    <li role="menuitem"><a class="dropdown-item" href="#">Unpublish</a></li>
-    <li role="menuitem"><a class="dropdown-item delete-link" href="#">Delete</a></li>
+    <li role="menuitem" (click)="actionType = 'Update'"><a class="dropdown-item">Update</a></li>
+    <li role="menuitem" (click)="actionType = 'Unpublish'"><a class="dropdown-item">Unpublish</a></li>
+    <li role="menuitem" (click)="actionType = 'Delete'"><a class="dropdown-item delete-link">Delete</a></li>
   </ul>
 </div>

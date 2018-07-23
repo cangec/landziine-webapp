@@ -1,13 +1,13 @@
 /*--------------------------------
 
-Landezine Web Font - built using nucleoapp.com
+landezine Web Font - built using nucleoapp.com
 License - nucleoapp.com/license/
 
 -------------------------------- */
 @font-face {
-  font-family: 'Landezine';
-  src: url('../fonts/Landezine.eot');
-  src: url('../fonts/Landezine.eot') format('embedded-opentype'), url('../fonts/Landezine.woff2') format('woff2'), url('../fonts/Landezine.woff') format('woff'), url('../fonts/Landezine.ttf') format('truetype'), url('../fonts/Landezine.svg') format('svg');
+  font-family: 'landezine';
+  src: url('../fonts/landezine.eot');
+  src: url('../fonts/landezine.eot') format('embedded-opentype'), url('../fonts/landezine.woff2') format('woff2'), url('../fonts/landezine.woff') format('woff'), url('../fonts/landezine.ttf') format('truetype'), url('../fonts/landezine.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -16,7 +16,7 @@ License - nucleoapp.com/license/
 -------------------------*/
 .nc-icon {
   display: inline-block;
-  font: normal normal normal 14px/1 'Landezine';
+  font: normal normal normal 14px/1 'landezine';
   font-size: inherit;
   speak: none;
   text-transform: none;
@@ -296,6 +296,194 @@ License - nucleoapp.com/license/
 
 .nc-edit::before {
     content: "\ea24";
+}
+
+.nc-pen-01::before {
+    content: "\ea25";
+}
+
+.nc-edit-72::before {
+    content: "\ea26";
+}
+
+.nc-attach-87::before {
+    content: "\ea27";
+}
+
+.nc-settings-gear-63::before {
+    content: "\ea28";
+}
+
+.nc-border-radius::before {
+    content: "\ea29";
+}
+
+.nc-cards::before {
+    content: "\ea2a";
+}
+
+.nc-alert-que::before {
+    content: "\ea2b";
+}
+
+.nc-alert-exc::before {
+    content: "\ea2c";
+}
+
+.nc-bold-remove::before {
+    content: "\ea2d";
+}
+
+.nc-bold-left::before {
+    content: "\ea2e";
+}
+
+.nc-bold-down::before {
+    content: "\ea2f";
+}
+
+.nc-bold-right::before {
+    content: "\ea30";
+}
+
+.nc-bold-up::before {
+    content: "\ea31";
+}
+
+.nc-enlarge-horizontal::before {
+    content: "\ea32";
+}
+
+.nc-enlarge-diagonal-44::before {
+    content: "\ea33";
+}
+
+.nc-enlarge-vertical::before {
+    content: "\ea34";
+}
+
+.nc-enlarge-diagonal-43::before {
+    content: "\ea35";
+}
+
+.nc-eye-17::before {
+    content: "\ea36";
+}
+
+.nc-eye-19::before {
+    content: "\ea37";
+}
+
+.nc-eye-ban-18::before {
+    content: "\ea38";
+}
+
+.nc-favourite-31-2::before {
+    content: "\ea39";
+}
+
+.nc-flash-21::before {
+    content: "\ea3a";
+}
+
+.nc-flag-diagonal-34::before {
+    content: "\ea3b";
+}
+
+.nc-flash-24::before {
+    content: "\ea3c";
+}
+
+.nc-folder-14::before {
+    content: "\ea3d";
+}
+
+.nc-folder-15::before {
+    content: "\ea3e";
+}
+
+.nc-folder-play::before {
+    content: "\ea3f";
+}
+
+.nc-folder-image-2::before {
+    content: "\ea40";
+}
+
+.nc-headphones::before {
+    content: "\ea41";
+}
+
+.nc-check-circle-08-2::before {
+    content: "\ea42";
+}
+
+.nc-circle-bold-remove::before {
+    content: "\ea43";
+}
+
+.nc-circle-bold-delete::before {
+    content: "\ea44";
+}
+
+.nc-circle-bold-add::before {
+    content: "\ea45";
+}
+
+.nc-circle-down-12::before {
+    content: "\ea46";
+}
+
+.nc-alert-circle-exc-1::before {
+    content: "\ea47";
+}
+
+.nc-alert-circle-que-1::before {
+    content: "\ea48";
+}
+
+.nc-alert-circle-i-1::before {
+    content: "\ea49";
+}
+
+.nc-button-circle-play-1::before {
+    content: "\ea4a";
+}
+
+.nc-button-circle-pause-1::before {
+    content: "\ea4b";
+}
+
+.nc-alert-circle-exc-2::before {
+    content: "\ea4c";
+}
+
+.nc-alert-circle-que-2::before {
+    content: "\ea4d";
+}
+
+.nc-alert-circle-i-2::before {
+    content: "\ea4e";
+}
+
+.nc-button-circle-stop::before {
+    content: "\ea4f";
+}
+
+.nc-button-circle-play-2::before {
+    content: "\ea50";
+}
+
+.nc-button-circle-pause-2::before {
+    content: "\ea51";
+}
+
+.nc-check-circle-07::before {
+    content: "\ea52";
+}
+
+.nc-check-circle-08-3::before {
+    content: "\ea53";
 }
 
 

@@ -84,6 +84,53 @@
     .dropdown-wrapper{
       float: right;
       position: relative;
+      .header-dropdown-li{
+        cursor: pointer;
+      }
+      .avatar{
+        width: 33px;
+        height: 33px;
+        background-image: url("../../../../assets/images/samples/4.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        float: left;
+      }
+
+      .title-type{
+        padding-left: 40px;
+        padding-right: 40px;
+        .title{
+          font-size: 14px;
+          font-family: Roboto;
+          color: @blue;
+        }
+        .type{
+          font-size: 10px;
+          color: @darkGrey;
+          text-align: left;
+        }
+      }
+
+      .dropdown-menu{
+        width: 100%;
+
+        .avatar{
+          margin-right: 7px;
+        }
+
+        .dropdown-item{
+          padding: 3px 7px !important;
+          line-height: 1.2;
+        }
+
+        .dropdown-item:hover{
+          background-color: #fff !important;
+        }
+
+      }
+
       .studio-dropdown{
         display: inline-block;
         line-height: normal;
@@ -94,37 +141,6 @@
         border: 1px solid @lightBorderGrey;
         border-radius: 2px;
         cursor: pointer;
-
-        .dropdown-menu{
-          width: 100%;
-
-        }
-
-        .avatar{
-          width: 33px;
-          height: 33px;
-          background-image: url("../../../../assets/images/samples/4.jpg");
-          background-position: center;
-          background-size: cover;
-          background-repeat: no-repeat;
-          border-radius: 50%;
-          float: left;
-        }
-
-        .title-type{
-          padding-left: 40px;
-          padding-right: 40px;
-          .title{
-            font-size: 14px;
-            font-family: Roboto;
-            color: @blue;
-          }
-          .type{
-            font-size: 10px;
-            color: @darkGrey;
-            text-align: left;
-          }
-        }
 
         .dropdown-icon{
           line-height: normal;

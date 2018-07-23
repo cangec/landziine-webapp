@@ -1,0 +1,17 @@
+
+<div class="video-block-container">
+  <div class="cms-well">
+    <h2 class="cms-well-title">
+      <span class="fa fa-th-list"></span>
+      {{title}}
+    </h2>
+    <div (click)="remove()" *ngIf="removeIcon" class="remove-block-icon">
+      <i class="nc-icon nc-simple-remove"></i>
+    </div>
+    <div class="lz-form">
+      <div class="lz-form-group">
+        <div [froalaEditor]="froalaOptions" [ngModel]="content" [(froalaModel)]="content" (ngModelChange)="valueChange($event)"></div>
+      </div>
+    </div>
+  </div>
+</div>

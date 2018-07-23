@@ -71,6 +71,26 @@ import { SearchResultsComponent } from './search-results/search-results.componen
 import { ResultMapComponent } from './shared/result-map/result-map.component';
 import { AdvancedSearchComponent } from './shared/advanced-search/advanced-search.component';
 import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
+import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
+import { TextBlockComponent } from './cms/shared/text-block/text-block.component';
+import { GalleryBlockComponent } from './cms/shared/gallery-block/gallery-block.component';
+import { MobxAngularModule } from 'mobx-angular';
+import { ProjectBuilderServiceService } from './services/project-builder-service.service';
+import { GeneralInfoService } from './services/general-info.service';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { PublicInfoIndividualComponent } from './cms/genral-info/public-info-individual/public-info-individual.component';
+import { PrivateInfoIndividualComponent } from './cms/genral-info/private-info-individual/private-info-individual.component';
+import { SkillsComponent } from './cms/genral-info/skills/skills.component';
+import { FileUploadModule  } from 'ng2-file-upload';
+import { AddTeammateComponent } from './cms/shared/modals/add-teammate/add-teammate.component';
+import { BsModalService } from 'ngx-bootstrap/modal';
+import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
+import {SelectModule} from 'ng2-select';
+import { AddEducationComponent } from './cms/shared/modals/add-education/add-education.component';
+import { PortfolioProjectsComponent } from './shared/portfolio-projects/portfolio-projects.component';
+import { ProjectCardComponent } from './shared/project-card/project-card.component';
+import { ProjectComponent } from './project/project.component';
+import { ProjectHeaderComponent } from './project/project-header/project-header.component';
 
 @NgModule({
   declarations: [
@@ -129,7 +149,18 @@ import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
     ApplicantComponent,
     SearchResultsComponent,
     ResultMapComponent,
-    AdvancedSearchComponent
+    AdvancedSearchComponent,
+    TextBlockComponent,
+    GalleryBlockComponent,
+    PublicInfoIndividualComponent,
+    PrivateInfoIndividualComponent,
+    SkillsComponent,
+    AddTeammateComponent,
+    AddEducationComponent,
+    PortfolioProjectsComponent,
+    ProjectCardComponent,
+    ProjectComponent,
+    ProjectHeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -144,15 +175,27 @@ import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
     ChartsModule,
     Ng2PageScrollModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCzUdXN51_9208Hj5n9Mg1_Mzmlzo4rBpY'
+      apiKey: 'AIzaSyCzUdXN51_9208Hj5n9Mg1_Mzmlzo4rBpY',
+      libraries: ['places']
     }),
     TooltipModule.forRoot(),
     DragulaModule,
     NgDatepickerModule,
-    AgmSnazzyInfoWindowModule
+    AgmSnazzyInfoWindowModule,
+    FroalaEditorModule.forRoot(),
+    FroalaViewModule.forRoot(),
+    MobxAngularModule,
+    ModalModule.forRoot(),
+    FileUploadModule,
+    SelectModule
+
+
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ProjectBuilderServiceService, GeneralInfoService, BsModalService, BsModalRef],
+  bootstrap: [AppComponent],
+  entryComponents: [
+    AddTeammateComponent, AddEducationComponent
+  ]
 })
 export class AppModule {
 

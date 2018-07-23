@@ -1,23 +1,23 @@
 <app-project-basic-info></app-project-basic-info>
 <app-image-upload [title]="'Cover image'"></app-image-upload>
-<div [attr.data-id]="'project-blocks'" class="blocks-container" [dragula]='"builder-bag"' [dragulaOptions]="dragulaOptions">
-  <p *ngIf="!blocks.length" class="drag-here-text">
+<div class="blocks-container" [dragula]='"page-bag"' id='left'>
+  <p *ngIf="!project.blocks.length" class="drag-here-text">
     Drag and drop blocks here
   </p>
-
-  <div *ngFor="let block of blocks">
+  <div id="blocks-list" *ngFor="let block of project.blocks; let i = index">
     <div *ngIf="block.type === 'image'">
-      <app-image-upload [title]="'Image'"></app-image-upload>
+      <app-image-upload (onRemove)="removeBlock(i)" [removeIcon]="true" [title]="'Image'"></app-image-upload>
     </div>
     <div *ngIf="block.type === 'text'">
-     text
+      <app-text-block [index]="i" (onRemove)="removeBlock(i)" [removeIcon]="true" [title]="'Text'"></app-text-block>
     </div>
     <div *ngIf="block.type === 'video'">
-      <app-video-block [title]="'Video'"></app-video-block>
+      <app-video-block [index]="i"  (onRemove)="removeBlock(i)" [removeIcon]="true" [title]="'Video'"></app-video-block>
     </div>
     <div *ngIf="block.type === 'gallery'">
-      gallery
+      <app-gallery-block (onRemove)="removeBlock(i)" [removeIcon]="true" [title]="'Gallery'"></app-gallery-block>
     </div>
   </div>
+
 </div>
 

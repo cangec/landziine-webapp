@@ -1,0 +1,26 @@
+<div class="container-fluid" style="margin-bottom: 100px; position: relative">
+
+  <div class="container" style="max-width: 1400px; position: relative">
+  <section class="projects-container">
+      <div class="lz-swiper-container">
+        <!-- direction rtl dir="rtl" -->
+        <swiper class="swiper-outer" [config]="swiperConfig">
+          <div class="swiper-wrapper">
+              <app-project-card [project]="item" class="swiper-slide" *ngFor="let item of projects"></app-project-card>
+          </div>
+          <!-- Add Arrows -->
+        </swiper>
+      </div>
+  </section>
+  </div>
+
+  <div class="swiper-button-next light-border">
+    <i class="nc-icon nc-tail-right square white-bg"></i>
+  </div>
+  <div class="swiper-button-prev light-border">
+    <i class="nc-icon nc-tail-left square white-bg"></i>
+  </div>
+
+</div>
+
+

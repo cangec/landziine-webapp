@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-architect-avatar',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArchitectAvatarComponent implements OnInit {
 
-  constructor() { }
+  @Input() architect;
+  @Output() onDeleteArchitect = new EventEmitter<any>();
+
+  constructor() {
+  }
 
   ngOnInit() {
+  }
+
+  deleteArchitect() {
+    this.onDeleteArchitect.emit(this.architect);
   }
 
 }

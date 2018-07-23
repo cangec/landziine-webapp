@@ -1,6 +1,6 @@
 /* --------------------------------
 
-Landezine Web Font - nucleoapp.com/
+landezine Web Font - nucleoapp.com/
 License - nucleoapp.com/license/
 
 -------------------------------- */
@@ -8,13 +8,13 @@ License - nucleoapp.com/license/
 @import "mixins";
 
 @font-face {
-  font-family: 'Landezine';
-  src: url('#{$nc-font-path}/Landezine.eot');
-  src: url('#{$nc-font-path}/Landezine.eot') format('embedded-opentype'),
-    url('#{$nc-font-path}/Landezine.woff2') format('woff2'),
-    url('#{$nc-font-path}/Landezine.woff') format('woff'),
-    url('#{$nc-font-path}/Landezine.ttf') format('truetype'),
-    url('#{$nc-font-path}/Landezine.svg') format('svg');
+  font-family: 'landezine';
+  src: url('#{$nc-font-path}/landezine.eot');
+  src: url('#{$nc-font-path}/landezine.eot') format('embedded-opentype'),
+    url('#{$nc-font-path}/landezine.woff2') format('woff2'),
+    url('#{$nc-font-path}/landezine.woff') format('woff'),
+    url('#{$nc-font-path}/landezine.ttf') format('truetype'),
+    url('#{$nc-font-path}/landezine.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -25,7 +25,7 @@ License - nucleoapp.com/license/
 
 .nc-icon {
   display: inline-block;
-  font: normal normal normal #{$nc-font-size-base}/1 'Landezine';
+  font: normal normal normal #{$nc-font-size-base}/1 'landezine';
   font-size: inherit;
   speak: none;
   text-transform: none;

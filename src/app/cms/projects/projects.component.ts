@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectBuilderServiceService } from '../../services/project-builder-service.service';
 
 @Component({
   selector: 'app-projects',
@@ -7,9 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor() { }
+  model;
+
+  constructor(private projectService: ProjectBuilderServiceService) {
+
+    this.model = this.projectService.project;
+
+  }
 
   ngOnInit() {
+
+  }
+
+  update() {
+    console.log(this.model);
+  }
+
+  unpublish() {
+    console.log("unoublish woot");
+  }
+
+  delete() {
+    console.log("woot delete");
   }
 
 }
